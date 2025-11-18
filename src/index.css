@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 158 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 158 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 25% 15%;
+
+    --primary: 158 64% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 45% 96%;
+    --secondary-foreground: 158 64% 25%;
+
+    --muted: 158 20% 96%;
+    --muted-foreground: 158 10% 45%;
+
+    --accent: 158 55% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 158 20% 90%;
+    --input: 158 20% 90%;
+    --ring: 158 64% 35%;
+
+    --radius: 0.75rem;
+    
+    --medical-green: 158 64% 35%;
+    --medical-green-light: 158 55% 92%;
+    --medical-green-dark: 158 64% 25%;
+    --trust-blue: 210 70% 45%;
+    --warm-bg: 45 25% 98%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 158 15% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 158 15% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 158 15% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 158 55% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 20% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 158 15% 15%;
+    --muted-foreground: 158 10% 65%;
+
+    --accent: 158 55% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 158 15% 20%;
+    --input: 158 15% 20%;
+    --ring: 158 55% 45%;
+    
+    --medical-green: 158 55% 45%;
+    --medical-green-light: 158 20% 20%;
+    --medical-green-dark: 158 64% 55%;
+    --trust-blue: 210 70% 55%;
+    --warm-bg: 158 10% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-bengali;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bengali font-semibold;
+  }
+}
