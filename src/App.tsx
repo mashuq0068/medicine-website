@@ -12,6 +12,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./utils/ScrollToTop";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+
 
 const queryClient = new QueryClient();
 

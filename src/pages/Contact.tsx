@@ -32,8 +32,8 @@ const Contact = () => {
                 variant="outline" 
                 className="border-medical-green text-medical-green hover:bg-medical-green-light"
               >
-                <a href="tel:+8801XXXXXXXXX">
-                  +880 1XXX-XXXXXX
+                <a href="tel:+8801806953677">
+                  +8801806953677
                 </a>
               </Button>
             </CardContent>
@@ -52,7 +52,7 @@ const Contact = () => {
                 asChild 
                 className="bg-[#25D366] hover:bg-[#20BA5A]"
               >
-                <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/8801806953677" target="_blank" rel="noopener noreferrer">
                   মেসেজ পাঠান
                 </a>
               </Button>
@@ -73,7 +73,7 @@ const Contact = () => {
                 variant="outline"
                 className="border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2]/10"
               >
-                <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/people/Authentic-German-Remedy/61583306746574/" target="_blank" rel="noopener noreferrer">
                   পেজ দেখুন
                 </a>
               </Button>
@@ -96,8 +96,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">ঠিকানা</h3>
                       <p className="text-muted-foreground">
-                        ১২৩, জনপথ রোড<br />
-                        মিরপুর-১০, ঢাকা-১২১৬<br />
+                        খান জাহান আলী রোড, খুলনা<br />
                         বাংলাদেশ
                       </p>
                     </div>
@@ -114,15 +113,11 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">ফোন নম্বর</h3>
                       <p className="text-muted-foreground">
-                        <a href="tel:+8801XXXXXXXXX" className="hover:text-medical-green">
-                          +880 1XXX-XXXXXX
+                        <a href="tel:+8801806953677" className="hover:text-medical-green">
+                          +8801806953677
                         </a>
                       </p>
-                      <p className="text-muted-foreground">
-                        <a href="tel:+8801YYYYYYYY" className="hover:text-medical-green">
-                          +880 1YYY-YYYYYY
-                        </a>
-                      </p>
+                   
                     </div>
                   </div>
                 </CardContent>
@@ -137,15 +132,11 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">ইমেইল</h3>
                       <p className="text-muted-foreground">
-                        <a href="mailto:info@example.com" className="hover:text-medical-green">
-                          info@example.com
+                        <a href="mailto:contractagr@gmail.com" className="hover:text-medical-green">
+                          contractagr@gmail.com
                         </a>
                       </p>
-                      <p className="text-muted-foreground">
-                        <a href="mailto:support@example.com" className="hover:text-medical-green">
-                          support@example.com
-                        </a>
-                      </p>
+                      
                     </div>
                   </div>
                 </CardContent>
@@ -206,7 +197,8 @@ const Contact = () => {
                   variant="secondary"
                   asChild
                 >
-                  <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                               <a href="https://wa.me/8801806953677" target="_blank" rel="noopener noreferrer">
+
                     <MessageCircle className="mr-2 h-5 w-5" />
                     WhatsApp করুন
                   </a>
@@ -217,7 +209,7 @@ const Contact = () => {
                   className="text-lg border-white text-white bg-accent/70 hover:bg-accent hover:text-white "
                   asChild
                 >
-                  <a href="tel:+8801XXXXXXXXX">
+                  <a href="tel:+8801806953677">
                     <Phone className="mr-2 h-5 w-5" />
                     ফোন করুন
                   </a>

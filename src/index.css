@@ -98,6 +98,17 @@ All colors MUST be HSL.
   }
 }
 
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 60px;
+    width: 30px;
+}
+/* Add this to your global CSS */
+/* global.css */
+.image-gallery {
+  touch-action: pan-y !important; /* ensure vertical scroll works */
+}
+
+
 @layer base {
   * {
     @apply border-border;

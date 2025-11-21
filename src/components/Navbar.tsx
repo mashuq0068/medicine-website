@@ -1,11 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "../assets/logo.jpg";
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate()
 
   const navLinks = [
     { to: "/", label: "হোম" },
@@ -15,17 +18,12 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+    <nav className=" z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-medical-green rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">DR</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">
-              জার্মান হোমিওপ্যাথি
-            </span>
-          </Link>
+        <div className="flex lg:flex-col flex-row items-center lg:justify-center justify-between h-36 lg:h-64">
+        <div onClick={() => navigate('/')}>
+            <img src={logo} alt="" className="h-32 w-32 cursor-pointer lg:h-48 lg:w-48"/>
+        </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -43,7 +41,7 @@ export const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="bg-medical-green hover:bg-medical-green-dark">
-              <a href="https://wa.me/8801XXXXXXXXX">
+              <a target="_blank" href="https://wa.me/8801806953677" rel="noopener noreferrer">
                 অর্ডার করুন
               </a>
             </Button>
@@ -76,7 +74,7 @@ export const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="w-full bg-medical-green hover:bg-medical-green-dark">
-              <a href="https://wa.me/8801XXXXXXXXX">
+              <a href="https://wa.me/8801806953677">
                 অর্ডার করুন
               </a>
             </Button>

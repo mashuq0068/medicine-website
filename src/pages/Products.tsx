@@ -2,15 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { products } from "@/data/products";
-import r6Image from "@/assets/r6-influenza.jpg";
-import r11Image from "@/assets/r11-rheuma.jpg";
-import r41Image from "@/assets/r41-sexual.jpg";
 
-const imageMap: Record<string, string> = {
-  "r6-influenza.jpg": r6Image,
-  "r11-rheuma.jpg": r11Image,
-  "r41-sexual.jpg": r41Image,
-};
+
 
 const Products = () => {
   return (
@@ -22,20 +15,21 @@ const Products = () => {
             আমাদের <span className="text-medical-green">পণ্য সমূহ</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dr. Reckeweg জার্মান হোমিওপ্যাথিক ওষুধ - প্রতিটি স্বাস্থ্য সমস্যার জন্য প্রাকৃতিক সমাধান
+            Dr. Reckeweg জার্মান হোমিওপ্যাথিক ওষুধ - প্রতিটি স্বাস্থ্য সমস্যার
+            জন্য প্রাকৃতিক সমাধান
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {products.map((product) => (
-            <Card 
-              key={product.id} 
+            <Card
+              key={product.id}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="aspect-square bg-gradient-to-br from-medical-green-light to-white p-8">
-                <img 
-                  src={imageMap[product.image]} 
+                <img
+                  src={product?.thumbImage}
                   alt={product.name}
                   className="w-full h-full object-contain"
                 />
@@ -43,42 +37,59 @@ const Products = () => {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h2 className="text-2xl font-bold mb-1">{product.name}</h2>
-                  <p className="text-sm text-muted-foreground mb-2">{product.nameEnglish}</p>
-                  <p className="text-medical-green font-semibold">{product.tagline}</p>
+              
+                  {/* <ul className="space-y-1">
+                    {product.benefits.map((benefit, idx) => (
+                      <li
+                        key={idx}
+                        className="text-sm text-muted-foreground flex items-start"
+                      >
+                        <span className="break-words whitespace-pre-line">
+                          {benefit}
+                        </span>
+                      </li>
+                    ))}
+                  </ul> */}
                 </div>
 
                 <div className="space-y-3 mb-6">
                   <div>
-                    <h4 className="font-semibold text-sm mb-2">মূল উপকারিতা:</h4>
+                    <h4 className="font-semibold text-sm mb-2">
+                      মূল উপকারিতা:
+                    </h4>
                     <ul className="space-y-1">
                       {product.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <span className="text-medical-green mr-2">✓</span>
+                        <li
+                          key={idx}
+                          className="text-sm  flex items-start"
+                        >
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2 border-t">
+                  {/* <div className="flex items-center justify-between pt-2 border-t">
                     <div>
-                      <p className="text-xs text-muted-foreground">প্যাক সাইজ</p>
+                      <p className="text-xs text-muted-foreground">
+                        প্যাক সাইজ
+                      </p>
                       <p className="font-semibold">{product.packSize}</p>
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-muted-foreground">মূল্য</p>
-                      <p className="text-2xl font-bold text-medical-green">{product.price}</p>
+                      <p className="text-2xl font-bold text-medical-green">
+                        {product.price}
+                      </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
-                <Button 
-                  asChild 
+                <Button
+                  asChild
                   className="w-full bg-medical-green hover:bg-medical-green-dark"
                 >
-                  <Link to={`/products/${product.id}`}>
-                    বিস্তারিত দেখুন
-                  </Link>
+                  <Link to={`/products/${product.id}`}>বিস্তারিত দেখুন</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -100,7 +111,9 @@ const Products = () => {
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">✓ পার্শ্বপ্রতিক্রিয়াহীন</h4>
+                  <h4 className="font-semibold mb-2">
+                    ✓ পার্শ্বপ্রতিক্রিয়াহীন
+                  </h4>
                   <p className="text-sm text-muted-foreground">
                     নিরাপদ সকল বয়সের জন্য
                   </p>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook, MessageCircle } from "lucide-react";
+import logo from "../assets/logo.jpg"
 
 export const Footer = () => {
   return (
@@ -9,12 +10,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-medical-green rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">DR</span>
-              </div>
-              <span className="font-bold text-lg">
-                জার্মান হোমিওপ্যাথি
-              </span>
+             <img src={logo} className="w-32 h-32 object-cover" alt="" />
             </div>
             <p className="text-sm text-muted-foreground">
               প্রাকৃতিক, নিরাপদ, পার্শ্বপ্রতিক্রিয়াহীন চিকিৎসা সবার কাছে পৌঁছে দিতেই আমাদের উদ্যোগ।
@@ -62,25 +58,25 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Phone size={16} className="text-medical-green" />
-                <a href="tel:+8801XXXXXXXXX" className="text-muted-foreground hover:text-primary">
-                  +880 1XXX-XXXXXX
+                <a href="tel:+8801806953677" className="text-muted-foreground hover:text-primary">
+                  +8801806953677
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <MessageCircle size={16} className="text-medical-green" />
-                <a href="https://wa.me/8801XXXXXXXXX" className="text-muted-foreground hover:text-primary">
+                <a href="https://wa.me/8801806953677" className="text-muted-foreground hover:text-primary">
                   WhatsApp
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Facebook size={16} className="text-medical-green" />
-                <a href="https://facebook.com/yourpage" className="text-muted-foreground hover:text-primary">
+                <a href="https://www.facebook.com/people/Authentic-German-Remedy/61583306746574/" className="text-muted-foreground hover:text-primary">
                   Facebook Page
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="text-medical-green" />
-                <span className="text-muted-foreground">info@example.com</span>
+                <span className="text-muted-foreground">contractagr@gmail.com</span>
               </li>
             </ul>
           </div>

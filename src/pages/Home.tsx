@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { 
   Shield, 
   Leaf, 
@@ -18,6 +18,7 @@ import r11Image from "@/assets/r11-rheuma.jpg";
 import r41Image from "@/assets/r41-sexual.jpg";
 
 const Home = () => {
+  const navigate = useNavigate()
   const features = [
     {
       icon: <Leaf className="w-8 h-8 text-medical-green" />,
@@ -117,12 +118,15 @@ const Home = () => {
                 size="lg" 
                 variant="outline"
                 asChild
+               
                 className="text-lg border-medical-green text-medical-green hover:bg-medical-green-light"
               >
-                <a href="https://wa.me/8801XXXXXXXXX">
-                  <Phone className="mr-2 h-5 w-5" />
+               
+                  <Link to="/contact">
+                     <Phone className="mr-2 h-5 w-5" />
                   যোগাযোগ করুন
-                </a>
+                  </Link>
+                
               </Button>
             </div>
           </div>
@@ -318,10 +322,11 @@ const Home = () => {
               asChild
               className="text-lg"
             >
-              <a href="https://wa.me/8801XXXXXXXXX">
+              <Link to="/products">
                 <Phone className="mr-2 h-5 w-5" />
                 এখনই অর্ডার করুন
-              </a>
+              </Link>
+            
             </Button>
             <Button 
               size="lg" 
