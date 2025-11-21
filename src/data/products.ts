@@ -1,7 +1,3 @@
-import r95Image from "../assets/r6-influenza.jpg";
-import r6Image from "../assets/r11-rheuma.jpg";
-import r11Image from "../assets/r11-rheuma.jpg";
-import r41Image from "../assets/r41-sexual.jpg";
 import r6Image1 from "../assets/images/r6/r6-image-1.jpg"
 import r6Image2 from "../assets/images/r6/r6-image-2.jpg"
 import r6ImageThumb from "../assets/images/r6/r6-image-thumbnail.jpg"
@@ -11,13 +7,16 @@ import r11ImageThumb from "../assets/images/r11/r11-image-thumbnail.jpg"
 import r95Image1 from "../assets/images/r95/r95-image-1.jpg"
 import r95Image2 from "../assets/images/r95/r95-image-2.jpg"
 import r95ImageThumb from "../assets/images/r95/r95-image-thumbnail.jpg"
+import r41ImageThumb from "../assets/images/r41/r41-image-thumbnail.jpg"
+import r41Image1 from "../assets/images/r41/r41-image-1.jpg"
+import r41Image2 from "../assets/images/r41/r41-image-2.jpg"
 
 export const products = [
   {
     id: "r95-alfalfa",
     name: "Dr. Reckeweg R-95 Alfalfa Tonic",
     thumbImage: r95ImageThumb,
-    productImages: [r95ImageThumb, r95Image2 , r95Image1],
+    productImages: [r95ImageThumb, r95Image1 , r95Image2],
     benefits: [
       "✅ শারীরিক ও মানসিক ক্লান্তি দূর করে",
       "✅ ক্ষুধা বৃদ্ধি করে",
@@ -63,7 +62,7 @@ ________________________________________
     id: "r6-influenza",
     name: "Dr. Reckeweg R-6 (Influenza Drops)",
     thumbImage: r6ImageThumb,
-    productImages: [r6Image1, r6Image2],
+    productImages: [r6ImageThumb, r6Image1, r6Image2],
     benefits: [
       "✅ সর্দি ও জ্বর দ্রুত কমায়",
       "✅ গলা ব্যথা ও কাশি উপশম",
@@ -200,8 +199,8 @@ ________________________________________
   {
     id: "r41-sexual",
     name: "Dr. Reckeweg R-41 Sexual Weakness Drops",
-    thumbImage: r41Image,
-    productImages: [r41Image, r41Image, r41Image],
+    thumbImage: r41ImageThumb,
+    productImages: [r41ImageThumb, r41Image2, r41Image1],
     benefits: [
       "✅ যৌন দুর্বলতা কমায়",
       "✅ স্নায়ুর শক্তি বৃদ্ধি",

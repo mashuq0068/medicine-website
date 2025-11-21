@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, Facebook, MessageCircle } from "lucide-react";
-import logo from "../assets/logo.jpg"
+import logo from "../assets/logo.png"
+import { products } from "@/data/products";
 
 export const Footer = () => {
   return (
@@ -40,15 +41,13 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">জনপ্রিয় পণ্য</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/products/r6-influenza" className="text-muted-foreground hover:text-primary">R-6 ইনফ্লুয়েঞ্জা</Link>
+             {products?.map((product) => (
+              <li key={product.id}>
+                <Link to={`/products/${product.id}`} className="text-muted-foreground hover:text-primary">
+                  {product.name}
+                </Link>
               </li>
-              <li>
-                <Link to="/products/r11-rheuma" className="text-muted-foreground hover:text-primary">R-11 বাত ব্যথা</Link>
-              </li>
-              <li>
-                <Link to="/products/r41-sexual" className="text-muted-foreground hover:text-primary">R-41 দুর্বলতা</Link>
-              </li>
+             ))}
             </ul>
           </div>
 

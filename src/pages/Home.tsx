@@ -13,9 +13,7 @@ import {
   Phone
 } from "lucide-react";
 import heroImage from "@/assets/hero-homeopathy.jpg";
-import r6Image from "@/assets/r6-influenza.jpg";
-import r11Image from "@/assets/r11-rheuma.jpg";
-import r41Image from "@/assets/r41-sexual.jpg";
+import { products } from "@/data/products";
 
 const Home = () => {
   const navigate = useNavigate()
@@ -51,32 +49,7 @@ const Home = () => {
     "মানসিক চাপ ও উদ্বেগ কমায়"
   ];
 
-  const products = [
-    {
-      id: "r6-influenza",
-      name: "Dr. Reckeweg R-6",
-      subtitle: "Influenza Drops",
-      tagline: "সর্দি-জ্বর দ্রুত নিরাময়",
-      price: "৳ ৪৫০",
-      image: r6Image
-    },
-    {
-      id: "r11-rheuma",
-      name: "Dr. Reckeweg R-11",
-      subtitle: "Rheuma Drops",
-      tagline: "বাত ব্যথায় তাৎক্ষণিক আরাম",
-      price: "৳ ৪৫০",
-      image: r11Image
-    },
-    {
-      id: "r41-sexual",
-      name: "Dr. Reckeweg R-41",
-      subtitle: "Sexual Weakness Drops",
-      tagline: "শারীরিক শক্তি বৃদ্ধি",
-      price: "৳ ৪৮০",
-      image: r41Image
-    }
-  ];
+
 
   return (
     <div className="min-h-screen">
@@ -175,32 +148,81 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square bg-gradient-to-br from-medical-green-light to-white p-8">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-1">{product.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{product.subtitle}</p>
-                  <p className="text-medical-green font-semibold mb-4">{product.tagline}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-medical-green">{product.price}</span>
-                    <Button asChild className="bg-medical-green hover:bg-medical-green-dark">
-                      <Link to={`/products/${product.id}`}>
-                        বিস্তারিত দেখুন
-                      </Link>
-                    </Button>
+          {/* Products Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {products.map((product) => (
+                      <Card
+                        key={product.id}
+                        className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                      >
+                        <div className="aspect-square bg-gradient-to-br from-medical-green-light to-white p-8">
+                          <img
+                            src={product?.thumbImage}
+                            alt={product.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <CardContent className="p-6">
+                          <div className="mb-4">
+                            <h2 className="text-2xl font-bold mb-1">{product.name}</h2>
+                        
+                            {/* <ul className="space-y-1">
+                              {product.benefits.map((benefit, idx) => (
+                                <li
+                                  key={idx}
+                                  className="text-sm text-muted-foreground flex items-start"
+                                >
+                                  <span className="break-words whitespace-pre-line">
+                                    {benefit}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul> */}
+                          </div>
+          
+                          <div className="space-y-3 mb-6">
+                            <div>
+                              <h4 className="font-semibold text-sm mb-2">
+                                মূল উপকারিতা:
+                              </h4>
+                              <ul className="space-y-1">
+                                {product.benefits.slice(0, 2).map((benefit, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="text-sm  flex items-start"
+                                  >
+                                    {benefit}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+          
+                            {/* <div className="flex items-center justify-between pt-2 border-t">
+                              <div>
+                                <p className="text-xs text-muted-foreground">
+                                  প্যাক সাইজ
+                                </p>
+                                <p className="font-semibold">{product.packSize}</p>
+                              </div>
+                              <div className="text-right">
+                                <p className="text-xs text-muted-foreground">মূল্য</p>
+                                <p className="text-2xl font-bold text-medical-green">
+                                  {product.price}
+                                </p>
+                              </div>
+                            </div> */}
+                          </div>
+          
+                          <Button
+                            asChild
+                            className="w-full bg-medical-green hover:bg-medical-green-dark"
+                          >
+                            <Link to={`/products/${product.id}`}>বিস্তারিত দেখুন</Link>
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
 
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="border-medical-green text-medical-green hover:bg-medical-green-light">

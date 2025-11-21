@@ -168,7 +168,7 @@ const Contact = () => {
             <h2 className="text-3xl font-bold mb-8">আমাদের অবস্থান</h2>
             <Card className="overflow-hidden h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.8474855234376!2d90.36510731498088!3d23.794534384563075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1c6764f45%3A0x3fe3f4c4c6f4c1c6!2sMirpur%2010%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1625000000000!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.920699966846!2d89.57168829999999!3d22.805402100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff8fde36cf9fc7%3A0x5efcdf61947fd978!2sKhan%20Jahan%20Ali%20Rd%2C%20Khulna!5e0!3m2!1sen!2sbd!4v1763737012956!5m2!1sen!2sbd"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -177,6 +177,7 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Our Location"
               />
+        
             </Card>
           </div>
         </div>
