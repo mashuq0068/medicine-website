@@ -52,57 +52,58 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50" />
-        </div>
+    {/* Hero Section */}
+<section className="relative min-h-[430px] flex items-center justify-center text-center">
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${heroImage})` }}
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50" />
+  </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
-            <div className="inline-block px-4 py-2 bg-medical-green-light rounded-full mb-6">
-              <span className="text-medical-green font-semibold text-sm">
-                জার্মানির বিশ্বস্ত হোমিওপ্যাথিক ওষুধ
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              প্রাকৃতিক চিকিৎসায়
-              <br />
-              <span className="text-medical-green">সুস্থ জীবন</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              ১০০% প্রাকৃতিক, পার্শ্বপ্রতিক্রিয়াহীন জার্মান হোমিওপ্যাথিক ওষুধ।
-              সর্দি, জ্বর, বাত ব্যথা ও শারীরিক দুর্বলতার নিরাপদ সমাধান।
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                asChild
-                className="bg-medical-green hover:bg-medical-green-dark text-lg"
-              >
-                <Link to="/products">পণ্য দেখুন</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="text-lg border-medical-green text-medical-green hover:bg-medical-green-light"
-              >
-                <Link to="/contact">
-                  <Phone className="mr-2 h-5 w-5" />
-                  যোগাযোগ করুন
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto py-6 px-4 relative z-10 flex justify-center">
+    <div className="max-w-2xl">
+      <div className="inline-block px-4 py-2 bg-medical-green-light rounded-full mb-6">
+        <span className="text-medical-green font-semibold text-sm">
+          জার্মানির বিশ্বস্ত হোমিওপ্যাথিক ওষুধ
+        </span>
+      </div>
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        প্রাকৃতিক চিকিৎসায়
+        <br />
+        <span className="text-medical-green">সুস্থ জীবন</span>
+      </h1>
+      <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+        ১০০% প্রাকৃতিক, পার্শ্বপ্রতিক্রিয়াহীন জার্মান হোমিওপ্যাথিক ওষুধ।
+        সর্দি, জ্বর, বাত ব্যথা ও শারীরিক দুর্বলতার নিরাপদ সমাধান।
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          size="lg"
+          asChild
+          className="bg-medical-green hover:bg-medical-green-dark text-lg"
+        >
+          <Link to="/products">পণ্য দেখুন</Link>
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          asChild
+          className="text-lg border-medical-green text-medical-green hover:bg-medical-green-light"
+        >
+          <Link to="/contact">
+            <Phone className="mr-2 h-5 w-5" />
+            যোগাযোগ করুন
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Products Section */}
-      <section className="py-20">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -200,9 +201,9 @@ const Home = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-8 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               কেন আমাদের বেছে নেবেন?
             </h2>
@@ -235,7 +236,7 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-medical-green-light to-white">
+      <section className="py-8 bg-gradient-to-br from-medical-green-light to-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -284,7 +285,7 @@ const Home = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -330,7 +331,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-medical-green text-white">
+      <section className="py-8 bg-medical-green text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             প্রাকৃতিক চিকিৎসায় সুস্থ থাকুন
