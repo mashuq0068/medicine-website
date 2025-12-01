@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 import { MessageCircle, Phone, Facebook, ArrowLeft } from "lucide-react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import bkashIcon from "../assets/icons/bkash.png";
+import bkashIcon from "../assets/icons/bKash.png";
 import nogodIcon from "../assets/icons/nogod.png";
 import cashIcon from "../assets/icons/cash.png";
 
