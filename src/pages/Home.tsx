@@ -119,8 +119,9 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {products.map((product) => (
               <Card
+               onClick={() => navigate(`/products/${product.id}`)}
                 key={product.id}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="aspect-square bg-gradient-to-br from-medical-green-light to-white p-8">
                   <img
@@ -215,6 +216,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Card
+              
                 key={index}
                 className="border-none shadow-sm hover:shadow-md transition-shadow"
               >
