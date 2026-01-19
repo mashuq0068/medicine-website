@@ -15,12 +15,18 @@ const ProductDetail = () => {
   const product = products.find((p) => p.id === id);
   const formRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  // const scrollToForm = () => {
+  //   formRef.current?.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // };
+  const navigateToOrderForm = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSccck-IX8s9lDlaTj-uADlH8mASjYHlSK3bml2fa8luTcdRuA/viewform",
+      "_blank"
+    );
+  }
 
   if (!product) {
     return (
@@ -58,7 +64,7 @@ const ProductDetail = () => {
 
           {/* Order Marker Text */}
           <Button
-            onClick={scrollToForm}
+            onClick={navigateToOrderForm}
             className="text-left ml-3 font-semibold text-lg cursor-pointer select-none 
               transition"
           >
@@ -69,7 +75,7 @@ const ProductDetail = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Carousel */}
           <div>
-            <Card  className="mb-4">
+            <Card className="mb-4">
               <div
                 style={{
                   touchAction: "pan-y", // allow vertical scrolling
@@ -92,109 +98,23 @@ const ProductDetail = () => {
               </div>
             </Card>
             {/* Order Form */}
-            <Card ref={formRef} className="mb-8 mt-8 bg-medical-green-light border-medical-green/20">
-              <CardContent className="p-6">
+            {/* Replace the Order Form Card with this */}
+            <Card className="mb-8 mt-8 bg-medical-green-light border-medical-green/20">
+              <CardContent className="p-6 text-center">
                 <h3 className="font-bold text-lg mb-4">এখনই অর্ডার করুন:</h3>
-
-                {/* Customer Details */}
-                <form className="space-y-4">
-                  <div>
-                    <label className="block mb-1 font-medium">নাম</label>
-                    <input
-                      type="text"
-                      placeholder="আপনার নাম লিখুন"
-                      className="w-full p-2 border border-gray-300 rounded"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-1 font-medium">ঠিকানা</label>
-                    <input
-                      type="text"
-                      placeholder="আপনার ঠিকানা লিখুন"
-                      className="w-full p-2 border border-gray-300 rounded"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-1 font-medium">ফোন নম্বর</label>
-                    <input
-                      type="tel"
-                      placeholder="০১XXXXXXXXX"
-                      className="w-full p-2 border border-gray-300 rounded"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-1 font-medium">
-                      বিবরণ / মন্তব্য
-                    </label>
-                    <textarea
-                      placeholder="যদি কোন বিশেষ নির্দেশনা থাকে লিখুন"
-                      className="w-full p-2 border border-gray-300 rounded"
-                      rows={3}
-                    />
-                  </div>
-
-                  {/* Payment Method */}
-                  <div>
-                    <h4 className="font-semibold mb-2">
-                      পেমেন্ট পদ্ধতি নির্বাচন করুন
-                    </h4>
-                    <div className="space-y-2">
-                      <label className="flex items-center space-x-2 p-2 border border-gray-400 rounded cursor-pointer hover:border-gray-500">
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="bkash"
-                          required
-                          className="accent-green-500"
-                        />
-                        <img src={bkashIcon} alt="Bkash" className="h-8 w-8" />
-                        <span>বিকাশ</span>
-                      </label>
-
-                      <label className="flex items-center space-x-2 p-2 border border-gray-400 rounded cursor-pointer hover:border-gray-500">
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="nogod"
-                          required
-                          className="accent-green-500"
-                        />
-                        <img src={nogodIcon} alt="Nogod" className="h-8 w-8" />
-                        <span>নগদ</span>
-                      </label>
-
-                      <label className="flex items-center space-x-2 p-2 border border-gray-400 rounded cursor-pointer hover:border-gray-500">
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="cash_on_delivery"
-                          required
-                          className="accent-green-500"
-                        />
-                        <img
-                          src={cashIcon}
-                          alt="Cash on Delivery"
-                          className="h-8 w-8"
-                        />
-                        <span>ক্যাশ অন ডেলিভারি</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  {/* Submit Button */}
-                  <Button
-                    type="submit"
-                    className="w-full bg-medical-green hover:bg-medical-green-dark text-white text-lg mt-4"
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full bg-medical-green hover:bg-medical-green-dark text-white text-lg"
+                >
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSccck-IX8s9lDlaTj-uADlH8mASjYHlSK3bml2fa8luTcdRuA/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    অর্ডার সম্পন্ন করুন
-                  </Button>
-                </form>
+                    অর্ডার করুন
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           </div>

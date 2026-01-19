@@ -64,7 +64,7 @@ const Home = () => {
   <div className="container mx-auto py-6 px-4 relative z-10 flex justify-center">
     <div className="max-w-2xl">
       <div className="inline-block px-4 py-2 bg-medical-green-light rounded-full mb-6">
-        <span className="text-medical-green font-semibold text-sm">
+        <span className="text-medical-green font-semibold text-xl">
           জার্মানির বিশ্বস্ত হোমিওপ্যাথিক ওষুধ
         </span>
       </div>
@@ -75,7 +75,7 @@ const Home = () => {
       </h1>
       <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
         ১০০% প্রাকৃতিক, পার্শ্বপ্রতিক্রিয়াহীন জার্মান হোমিওপ্যাথিক ওষুধ।
-        সর্দি, জ্বর, বাত ব্যথা ও শারীরিক দুর্বলতার নিরাপদ সমাধান।
+        {/* সর্দি, জ্বর, বাত ব্যথা ও শারীরিক দুর্বলতার নিরাপদ সমাধান। */}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button
